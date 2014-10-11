@@ -37,7 +37,7 @@ $(document).ready(function() {
       var finalTranslated = ""
 
       if (translated) {
-        finalTranslated = translated.toUpperCase()
+        finalTranslated = "<span class='translated'>" + translated.toUpperCase() + "</span>"
       } else {
         finalTranslated = word
       }
@@ -49,7 +49,7 @@ $(document).ready(function() {
       returnArr.push(finalTranslated);
 
     };
-    $("#output").text(returnArr.join(" "));
+    $("#output").html(returnArr.join(" "));
   })
 
 });
