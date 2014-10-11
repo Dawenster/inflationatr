@@ -20,12 +20,19 @@ $(document).ready(function() {
     alert( "error" );
   });
 
+  function capitaliseFirstLetter(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
   $("#inflationate").click(function() {
     var value = $("#input").val().trim();
     var valueArr = value.split(" ");
     var returnArr = []
     
     for (var i = 0; i < valueArr.length; i++) {
+      var originalWord = valueArr[i];
+      var upcase = originalWord[0] === originalWord[0].toUpperCase();
+
       var wordWithPunc = valueArr[i].toUpperCase();
 
       var wordWithPuncArr = wordWithPunc.split(/\s*\b\s*/);
@@ -37,9 +44,15 @@ $(document).ready(function() {
       var finalTranslated = ""
 
       if (translated) {
-        finalTranslated = "<span class='translated'>" + translated.toUpperCase() + "</span>"
+        if (upcase) {
+          translated = capitaliseFirstLetter(translated.toLowerCase());
+        }
+        finalTranslated = "<span class='translated'>" + translated + "</span>"
       } else {
-        finalTranslated = word
+        finalTranslated = word.toLowerCase()
+        if (upcase) {
+          finalTranslated = capitaliseFirstLetter(finalTranslated);
+        }
       }
 
       if (wordWithPuncArr.length > 0) {
