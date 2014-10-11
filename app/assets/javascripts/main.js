@@ -44,8 +44,9 @@ $(document).ready(function() {
       var finalTranslated = ""
 
       if (translated) {
+        translated = translated.toLowerCase();
         if (upcase) {
-          translated = capitaliseFirstLetter(translated.toLowerCase());
+          translated = capitaliseFirstLetter(translated);
         }
         finalTranslated = "<span class='translated'>" + translated + "</span>"
       } else {
