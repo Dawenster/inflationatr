@@ -1,0 +1,262 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
+
+h1 {
+  font-size:1.5em
+}
+
+/*
+ * Base structure
+ */
+
+html,
+body {
+  font-family: "myriad pro";
+  height: 100%;
+  background: -webkit-linear-gradient(rgba(249,93,62,1), rgba(254,15,149,1)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(249,93,62,1), rgba(254,15,149,1)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(249,93,62,1), rgba(254,15,149,1)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(249,93,62,1), rgba(254,15,149,1)); /* Standard syntax */
+  background-repeat:no-repeat;
+  background-size: cover;
+  background-position:center;
+}
+body {
+  color: #fff;
+  text-align: center;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+  text-align:center;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+.top-logo{
+text-align:left;
+width:100%;
+}
+
+.slider-logo{
+  text-align:center;
+  width:120px;
+}
+
+.under-text{
+  margin-bottom:20px;
+  font-size:1em;
+  font-weight:300;
+  line-height:1.4
+}
+
+.btn-outline{
+  color:none;
+  font-size: .75em;
+  text-transform: uppercase;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 10px 20px;
+}
+
+.btn-outline:hover{
+    background-color:white;
+}
+
+.btn-spacer{
+  margin-left:10px;
+  margin-right:5px;
+}
+
+/*
+ * Header
+ */
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-family: "myriad pro";
+  font-size: 12px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  padding: 0 20px;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.cover-heading{
+  font-size:1.5em;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.cover-subheading{
+  font-size:1em;
+  letter-spacing:1px;
+  text-transform: uppercase;
+}
+
+.upper-pad{
+  padding-top: 15%
+}
+
+.letter-one{
+  letter-spacing: 1px; 
+}
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+}
+
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+    top: 0;
+    text-align:left;
+  }
+  .mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 80%;
+  }
+}
+
+/* CUSTOM CSS */
+
+.counter {
+  text-align: center;
+  color: white;
+  font-family: "HelveticaNeue-UltraLight";
+  font-weight:100;
+  font-size: 3.5em;
+  letter-spacing: 5px;
+}
+
+.sub-counter {
+  text-align: center;
+  color: white;
+  font-family: "HelveticaNeue-UltraLight";
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+
+.separator {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+.intro-video{
+  border: 10px solid white;
+}
+
+.textbox{
+  border: 2px solid white;
+  border-radius: 4px;
+  background: none;
+  color: none;
+}

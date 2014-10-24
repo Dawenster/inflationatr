@@ -25,6 +25,21 @@ $(document).ready(function() {
   }
 
   $("#inflationate").click(function() {
+    inflationate();
+  })
+
+  $('textarea').bind("enterKey", function(e){
+    inflationate();
+  });
+
+  $('#input').keydown(function(e){
+    if (e.keyCode == 13) {
+      e.preventDefault();
+      $(this).trigger("enterKey");
+    }
+  });
+
+  var inflationate = function() {
     var value = $("#input").val().trim();
     var valueArr = value.split(" ");
     var returnArr = []
@@ -64,6 +79,5 @@ $(document).ready(function() {
 
     };
     $("#output").html(returnArr.join(" "));
-  })
-
+  }
 });
