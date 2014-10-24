@@ -4,23 +4,37 @@
 
 /* Links */
 a,
-a:focus,
-a:hover {
-  color: #fff;
+a:focus {
+  color: rgba(255,255,255,0.5);
+  text-decoration: none !important;
+}
+
+a:hover{
+  color: rgba(255,255,255,1);
 }
 
 /* Custom default button */
 .btn-default,
-.btn-default:hover,
 .btn-default:focus {
-  color: #333;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: rgba(253,62,103,1);
+  background: white;
   text-shadow: none; /* Prevent inheritence from `body` */
-  background-color: #fff;
-  border: 1px solid #fff;
+
+  border: 2px solid #fff;
+}
+
+.btn-default:hover{
+  color: white;
+  background: none;
 }
 
 h1 {
-  font-size:1.5em
+  font-size:1.5em;
+  -webkit-margin-before: 0em; /* prevent inheritance */
+  -webkit-margin-after: 0em; /* prevent inheritance */
 }
 
 /*
@@ -29,15 +43,12 @@ h1 {
 
 html,
 body {
-  font-family: "myriad pro";
+  font-family: "HelveticaNeue";
   height: 100%;
-  background: -webkit-linear-gradient(rgba(249,93,62,1), rgba(254,15,149,1)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgba(249,93,62,1), rgba(254,15,149,1)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgba(249,93,62,1), rgba(254,15,149,1)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgba(249,93,62,1), rgba(254,15,149,1)); /* Standard syntax */
-  background-repeat:no-repeat;
-  background-size: cover;
-  background-position:center;
+  background: -webkit-linear-gradient(rgba(249,93,62,1), rgba(254,47,125,1)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(249,93,62,1), rgba(254,47,125,1)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(249,93,62,1), rgba(254,47,125,1)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(249,93,62,1), rgba(254,47,125,1)); /* Standard syntax */
 }
 body {
   color: #fff;
@@ -119,15 +130,14 @@ width:100%;
 .masthead-nav > li > a {
   padding-right: 0;
   padding-left: 0;
-  font-family: "myriad pro";
   font-size: 12px;
-  letter-spacing: 1px;
   text-transform: uppercase;
   color: #fff; /* IE8 proofing */
   color: rgba(255,255,255,.75);
 }
 .masthead-nav > li > a:hover,
 .masthead-nav > li > a:focus {
+  color: rgba(255,255,255,1);
   background-color: transparent;
   border-bottom-color: rgba(255,255,255,.25);
 }
@@ -252,11 +262,16 @@ width:100%;
 
 .intro-video{
   border: 10px solid white;
+  border:10px;
 }
 
 .textbox{
   border: 2px solid white;
   border-radius: 4px;
   background: none;
-  color: none;
+  color: white;
+}
+
+.glow:hover{
+  color: rgba(255,255,255,1) !important;
 }
