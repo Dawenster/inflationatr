@@ -50,7 +50,7 @@ $(document).ready(function() {
 
       var wordWithPunc = valueArr[i].toUpperCase();
 
-      var wordWithPuncArr = wordWithPunc.split(/\s*\b\s*/);
+      var wordWithPuncArr = wordWithPunc.split(/\s*\b\s*\\r?\\n/);
 
       var word = wordWithPuncArr.shift();
 
