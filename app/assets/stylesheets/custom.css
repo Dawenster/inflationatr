@@ -481,7 +481,7 @@ width:100%;
   font-family: "HelveticaNeue-UltraLight", 'Roboto', sans-serif;
   font-weight:100;
   font-size: 1em;
-  letter-spacing: 1px;
+  letter-spacing: 2px;
 }
 
 .separator {
@@ -491,7 +491,6 @@ width:100%;
 
 .intro-video{
   border: 10px solid white;
-  border:10px;
 }
 
 .textbox{
@@ -503,8 +502,5 @@ width:100%;
   background: none;
   width: 60%;
   resize: vertical;
-}
 
-.glow:hover{
-  color: rgba(255,255,255,1) !important;
 }
