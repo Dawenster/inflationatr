@@ -28,7 +28,7 @@ $(document).ready(function() {
     inflationate();
   })
 
-  $('textarea').bind("enterKey", function(e){
+  $('#input').bind("enterKey", function(e){
     inflationate();
   });
 
@@ -41,43 +41,49 @@ $(document).ready(function() {
 
   var inflationate = function() {
     var value = $("#input").val().trim();
-    var valueArr = value.split(" ");
-    var returnArr = []
-    
-    for (var i = 0; i < valueArr.length; i++) {
-      var originalWord = valueArr[i];
-      var upcase = originalWord[0] === originalWord[0].toUpperCase();
+    var paragraphs = value.match(/[^\r\n]+/g);
+    var paragraphsReturnArr = [];
 
-      var wordWithPunc = valueArr[i].toUpperCase();
+    for (var ip = 0; ip < paragraphs.length; ip++) {
+      var valueArr = paragraphs[ip].split(" ");
+      var returnArr = []
 
-      var wordWithPuncArr = wordWithPunc.split(/\s*\b\s*/);
+      
+      for (var i = 0; i < valueArr.length; i++) {
+        var originalWord = valueArr[i];
+        var upcase = originalWord[0] === originalWord[0].toUpperCase();
 
-      var word = wordWithPuncArr.shift();
+        var wordWithPunc = valueArr[i].toUpperCase();
 
-      var translated = data[word];
+        var wordWithPuncArr = wordWithPunc.split(/\s*\b\s*/);
 
-      var finalTranslated = ""
+        var word = wordWithPuncArr.shift();
 
-      if (translated) {
-        translated = translated.toLowerCase();
-        if (upcase) {
-          translated = capitaliseFirstLetter(translated);
+        var translated = data[word];
+
+        var finalTranslated = ""
+
+        if (translated) {
+          translated = translated.toLowerCase();
+          if (upcase) {
+            translated = capitaliseFirstLetter(translated);
+          }
+          finalTranslated = "<span class='translated'>" + translated + "</span>"
+        } else {
+          finalTranslated = word.toLowerCase()
+          if (upcase) {
+            finalTranslated = capitaliseFirstLetter(finalTranslated);
+          }
         }
-        finalTranslated = "<span class='translated'>" + translated + "</span>"
-      } else {
-        finalTranslated = word.toLowerCase()
-        if (upcase) {
-          finalTranslated = capitaliseFirstLetter(finalTranslated);
+
+        if (wordWithPuncArr.length > 0) {
+          finalTranslated += wordWithPuncArr.join("");
         }
-      }
 
-      if (wordWithPuncArr.length > 0) {
-        finalTranslated += wordWithPuncArr.join("");
-      }
-
-      returnArr.push(finalTranslated);
-
+        returnArr.push(finalTranslated);
+      };
+      paragraphsReturnArr.push(returnArr.join(" "));
     };
-    $("#output").html(returnArr.join(" "));
+    $("#output").html(paragraphsReturnArr.join("<br/><br/>"));
   }
 });
