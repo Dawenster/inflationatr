@@ -1,3 +1,11 @@
 .translated {
   font-weight: bold;
 }
+
+.texts-holder {
+  display: inline-block;
+}
+
+.btn-text {
+  background-color: pink;
+}

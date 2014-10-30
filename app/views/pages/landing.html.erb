@@ -10,36 +10,49 @@
           </ul>
         </div>
       </div>
-        <div class="inner cover">
-        	<h1 class="counter"><%= @count %></h1>
-        	<p class="sub-counter">numbers inflationated</p>
-        </div>
-          <div class="separator" /></div>
-          <!-- insert video -->
-          <div class="video">
-          	<iframe width="350" height="262.5" src="//www.youtube.com/embed/YY6kElOYcd8" frameborder="0" allowfullscreen></iframe>
-          </div>
+      <div class="inner cover">
+      	<h1 class="counter"><%= number_with_delimiter(@count, :delimiter => ',') %></h1>
+      	<p class="sub-counter">numbers inflationated</p>
+      </div>
+      <div class="separator" /></div>
+      <!-- insert video -->
+      <div>
+        <iframe width="350" height="262.5" src="//www.youtube.com/embed/YY6kElOYcd8" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="separator" /></div>
+      <div style="margin: 20px;">
+        Try it out!
+      </div>
 
-          <!-- insert text box -->
+      <div class="texts-holder">
+        <a data-text="gettysburg" class="btn btn-default btn-large btn-text" href="#">Gettysburg Address</a>
+      </div>
 
-          <div class="translate">
+      <div class="texts-holder">
+        <a data-text="hamlet" class="btn btn-default btn-large btn-text" href="#">To be or not to be</a>
+      </div>
 
-            <textarea id="input" class="translation-box tr-input" placeholder="type your text here"></textarea>
-            <div id="output" class="translation-box tr-output"></div>
-          </div>
+      <div class="texts-holder">
+        <a data-text="frost" class="btn btn-default btn-large btn-text" href="#">Robert Frost</a>
+      </div>
 
-          <div class="fourpercent">
-            <a id="inflationate" class="btn-default btn-outline" href="#">Inflationine!</a>
-          </div>
-          
-          <!-- <textarea id="input" class="textbox animated">Four score and seven years ago our fathers brought forth on this continent a new nation, conceived in liberty, and dedicated to the proposition that all men are created equal.</textarea>    	 -->
+      <div style="margin: 20px;">
+        Or type your own :)
+      </div>
+      <div class="separator" /></div>
 
-          <div class="separator"></div>
+      <!--- input output boxes -->
+
+      <div class="translate">
+        <textarea id="input" class="translation-box tr-input" placeholder="type your text here"></textarea>
+        <div id="output" class="translation-box tr-output"></div>
+      </div>
+      <div class="fourpercent"></div>
+      <div>
+        <a id="inflationate" class="btn-default btn-outline" href="#">Inflationine!</a>
+      </div>
       <br>
       <div id="output"> </div>
-      
-      <div class="separator" /></div>
-      <!-- insert text box -->
 
       <p class="submit-warning"> Did one of your words not Inflationate? <a href="">Click me </a> to submit it!</p> 
       <div class="separator"></div>
