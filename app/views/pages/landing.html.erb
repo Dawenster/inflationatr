@@ -54,11 +54,11 @@
       <br>
       <div id="output"> </div>
 
-      <p class="submit-warning"> Did one of your words not Inflationate? <a href="">Click me </a> to submit it!</p> 
+      <p class="submit-warning"> Did one of your words not Inflationate? <a href="" id="clickToCorrectWord">Click me </a> to submit it!</p> 
       <div class="separator"></div>
 
       <!--- insert google form for missing words -->
-      <div> 
+      <div class="googleFormToCorrectWord" style="display: none;"> 
         <form action="https://docs.google.com/forms/d/1ur4D8E8PZD7TI3vrKwssTs9-Rw9zUTKdqkX8c-oAjLg/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
           <ol role="list" class="ss-question-list" style="padding-left: 0">
             <div class="ss-form-question errorbox-good" role="listitem">
@@ -66,7 +66,7 @@
                 <div class="ss-form-entry">
                   <label class="ss-q-item-label" for="entry_242232634"></label>
                   <input type="text" name="entry.242232634" value="" class="ss-q-short" id="entry_242232634" dir="auto" aria-label="What word did I sadly not inflationate for you? I&#39;m sorry :&#39;( I&#39;m new at this. " title="">
-                  <input type="submit" name="submit" value="Submit" id="ss-submit" class="btn-default btn-outline">
+                  <input type="submit" name="submit" value="Submit" id="ss-submit" class="btn btn-default btn-large" style="cursor: pointer;">
                   <div class="error-message" id="565814671_errorMessage"></div>
                 </div>
               </div>
