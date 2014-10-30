@@ -138,6 +138,11 @@ $(document).ready(function() {
     "frost": frost
   }
 
+  $("body").on("click", "#clickToCorrectWord", function(e) {
+    e.preventDefault();
+    $(".googleFormToCorrectWord").toggle();
+    window.scrollTo(0,document.body.scrollHeight);
+  });
 
   $("body").on("click", ".btn-text", function(e) {
     e.preventDefault();
@@ -145,5 +150,5 @@ $(document).ready(function() {
 
     $('.animated').val(texts[text]).trigger('autosize.resize');
     inflationate();
-  })
+  });
 });
