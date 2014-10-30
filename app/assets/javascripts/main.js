@@ -43,6 +43,7 @@ $(document).ready(function() {
     var value = $("#input").val().trim();
     var paragraphs = value.match(/[^\r\n]+/g);
     var paragraphsReturnArr = [];
+    var numInflatedWords = 0;
 
     for (var ip = 0; ip < paragraphs.length; ip++) {
       var valueArr = paragraphs[ip].split(" ");
@@ -69,6 +70,7 @@ $(document).ready(function() {
             translated = capitaliseFirstLetter(translated);
           }
           finalTranslated = "<span class='translated'>" + translated + "</span>"
+          numInflatedWords += 1;
         } else {
           finalTranslated = word.toLowerCase()
           if (upcase) {
@@ -85,5 +87,29 @@ $(document).ready(function() {
       paragraphsReturnArr.push(returnArr.join(" "));
     };
     $("#output").html(paragraphsReturnArr.join("<br/><br/>"));
+    addCountToDatabase(numInflatedWords);
+    addCountToView(numInflatedWords);
+  }
+
+  var addCountToDatabase = function(numInflatedWords) {
+    $.ajax({
+      url: "/add_to_count",
+      method: "post",
+      dataType: "json",
+      data: {
+        num_to_add: numInflatedWords
+      }
+    })
+    .done(function(result) {
+      console.log(result.data);
+    })
+    .fail(function() {
+      alert("Gawd, something broke...");
+    });
+  }
+
+  var addCountToView = function(numToAdd) {
+    var oldNum = parseInt($(".counter").text());
+    $(".counter").text(oldNum + numToAdd);
   }
 });

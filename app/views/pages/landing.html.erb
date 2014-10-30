@@ -10,64 +10,60 @@
           </ul>
         </div>
       </div>
-        <div class="inner cover">
-        	<h1 class="counter">142,893</h1>
-        	<p class="sub-counter">numbers inflationated</p>
-        </div>
-        <div class="separator" /></div>
-        <!-- insert video -->
-        <div>
-        	<iframe width="350" height="262.5" src="//www.youtube.com/embed/YY6kElOYcd8" frameborder="0" allowfullscreen></iframe>
-        </div>
-          <div class="separator" /></div>
-          <!-- insert text box -->
-          
-          <textarea id="input" class="textbox animated">Four score and seven years ago our fathers brought forth on this continent a new nation, conceived in liberty, and dedicated to the proposition that all men are created equal.</textarea>    	
-
-          <div class="separator"></div>
-
-
+      <div class="inner cover">
+      	<h1 class="counter"><%= @count %></h1>
+        <p class="sub-counter">numbers inflationated</p>
+      </div>
+      <div class="separator" /></div>
+      <!-- insert video -->
       <div>
-      		<a id="inflationate" class="btn-default btn-outline" href="#">Inflationine!</a>
+        <iframe width="350" height="262.5" src="//www.youtube.com/embed/YY6kElOYcd8" frameborder="0" allowfullscreen></iframe>
+      </div>
+      <div class="separator" /></div>
+      <textarea id="input" class="textbox animated"></textarea>
+      <div class="separator" /></div>
+      <div>
+        <a id="inflationate" class="btn-default btn-outline" href="#">Inflationine!</a>
       </div>
       <br>
       <div id="output"> </div>
+      
+      <div class="separator" /></div>
+      <!-- insert text box -->
 
+      <p class="submit-warning"> Did one of your words not Inflationate? <a href="">Click me </a> to submit it!</p> 
       <div class="separator"></div>
-        <p class="submit-warning"> Did one of your words not Inflationate? <a href="">Click me </a> to submit it!</p> 
 
       <!--- insert google form for missing words -->
-        <div> 
-          <form action="https://docs.google.com/forms/d/1ur4D8E8PZD7TI3vrKwssTs9-Rw9zUTKdqkX8c-oAjLg/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
-            <ol role="list" class="ss-question-list" style="padding-left: 0">
-                <div class="ss-form-question errorbox-good" role="listitem">
-                    <div dir="ltr" class="ss-item  ss-text">
-                        <div class="ss-form-entry">
-                            <label class="ss-q-item-label" for="entry_242232634"></label>
-                            <input type="text" name="entry.242232634" value="" class="ss-q-short" id="entry_242232634" dir="auto" aria-label="What word did I sadly not inflationate for you? I&#39;m sorry :&#39;( I&#39;m new at this. " title="">
-                            <input type="submit" name="submit" value="Submit" id="ss-submit" class="btn-default btn-outline">
-                            <div class="error-message" id="565814671_errorMessage"></div>
-                        </div>
-                    </div>
+      <div> 
+        <form action="https://docs.google.com/forms/d/1ur4D8E8PZD7TI3vrKwssTs9-Rw9zUTKdqkX8c-oAjLg/formResponse" method="POST" id="ss-form" target="_self" onsubmit="">
+          <ol role="list" class="ss-question-list" style="padding-left: 0">
+            <div class="ss-form-question errorbox-good" role="listitem">
+              <div dir="ltr" class="ss-item  ss-text">
+                <div class="ss-form-entry">
+                  <label class="ss-q-item-label" for="entry_242232634"></label>
+                  <input type="text" name="entry.242232634" value="" class="ss-q-short" id="entry_242232634" dir="auto" aria-label="What word did I sadly not inflationate for you? I&#39;m sorry :&#39;( I&#39;m new at this. " title="">
+                  <input type="submit" name="submit" value="Submit" id="ss-submit" class="btn-default btn-outline">
+                  <div class="error-message" id="565814671_errorMessage"></div>
                 </div>
-                <input type="hidden" name="draftResponse" value="[,,&quot;2766345391749529387&quot;]">
-                <input type="hidden" name="pageHistory" value="0">
-                <input type="hidden" name="fbzx" value="2766345391749529387">
-                <div class="ss-item ss-navigate">
-                    <table id="navigation-table">
-                        <tbody>
-                            <tr>
-                                <td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr">
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </ol>
-          </form>
-        </div>
+              </div>
+            </div>
+            <input type="hidden" name="draftResponse" value="[,,&quot;2766345391749529387&quot;]">
+            <input type="hidden" name="pageHistory" value="0">
+            <input type="hidden" name="fbzx" value="2766345391749529387">
+            <div class="ss-item ss-navigate">
+              <table id="navigation-table">
+                <tbody>
+                  <tr>
+                    <td class="ss-form-entry goog-inline-block" id="navigation-buttons" dir="ltr"></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </ol>
+        </form>
+      </div>
       <!--- end google form -->
-
     </div>
   </div>
 </div>
