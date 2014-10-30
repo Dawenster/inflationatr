@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20141029235533) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "information_tables", force: true do |t|
+  create_table "information", force: true do |t|
     t.integer  "count"
     t.datetime "created_at"
     t.datetime "updated_at"
