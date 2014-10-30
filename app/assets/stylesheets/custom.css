@@ -433,8 +433,8 @@ width:100%;
  * Affix and center
  *
 
+/* Pull out the header and footer */
 @media (min-width: 768px) {
-  /* Pull out the header and footer */
   .masthead {
     top: 0;
     text-align:left;
