@@ -249,14 +249,23 @@ a:hover{
   color: rgba(253,62,103,1);
   background: white;
   text-shadow: none; /* Prevent inheritence from `body` */
-
   border: 2px solid #fff;
 }
 
 .btn-default:hover{
-  color: white;
-  background: none;
+  background: rgba(255,255,255,0.5);
+  text-shadow: 0px 0px 2px #000000;
 }
+
+.btn-outline{
+  /*color:none;*/
+  font-size: .75em;
+  text-transform: uppercase;
+  border: 1px solid white;
+  border-radius: 3px;
+  padding: 10px 20px;
+}
+
 
 h1 {
   font-size:1.5em;
@@ -273,10 +282,8 @@ html,
 body {
   font-family: 'HelveticaNeue', 'Roboto', sans-serif;
   height: 100%;
-  background: -webkit-linear-gradient(rgba(249,93,62,1), rgba(254,47,125,1)); /* For Safari 5.1 to 6.0 */
-  background: -o-linear-gradient(rgba(249,93,62,1), rgba(254,47,125,1)); /* For Opera 11.1 to 12.0 */
-  background: -moz-linear-gradient(rgba(249,93,62,1), rgba(254,47,125,1)); /* For Firefox 3.6 to 15 */
-  background: linear-gradient(rgba(249,93,62,1), rgba(254,47,125,1)); /* Standard syntax */
+  width: 100% !important;
+  margin: 0 !important;
 }
 body {
   color: #fff;
@@ -286,9 +293,15 @@ body {
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
   display: table;
-  width: 100%;
+  /*width: 100%;*/
   height: 100%; /* For at least Firefox */
+  width: 100%;
   min-height: 100%;
+  background: -webkit-linear-gradient(rgba(249,93,62,1), rgba(254,47,125,1)); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(rgba(249,93,62,1), rgba(254,47,125,1)); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(rgba(249,93,62,1), rgba(254,47,125,1)); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(rgba(249,93,62,1), rgba(254,47,125,1)); /* Standard syntax */
+
 
 }
 .site-wrapper-inner {
@@ -303,7 +316,7 @@ body {
 
 /* Padding for spacing */
 .inner {
-  padding: 30px;
+  width: 100%;
 }
 
 .top-logo{
@@ -321,19 +334,6 @@ width:100%;
   font-size:1em;
   font-weight:300;
   line-height:1.4
-}
-
-.btn-outline{
-  color:none;
-  font-size: .75em;
-  text-transform: uppercase;
-  border: 1px solid white;
-  border-radius: 3px;
-  padding: 10px 20px;
-}
-
-.btn-outline:hover{
-    background-color:white;
 }
 
 .btn-spacer{
@@ -391,7 +391,7 @@ width:100%;
  */
 
 .cover {
-  padding: 0 20px;
+  /*padding: 0 20px;*/
 }
 .cover .btn-lg {
   padding: 10px 20px;
@@ -431,17 +431,16 @@ width:100%;
 
 /*
  * Affix and center
- */
+ *
 
 @media (min-width: 768px) {
   /* Pull out the header and footer */
   .masthead {
-    position: fixed;
     top: 0;
     text-align:left;
+    width:100% !important;
   }
   .mastfoot {
-    position: fixed;
     bottom: 0;
   }
   /* Start the vertical centering */
@@ -452,7 +451,7 @@ width:100%;
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+    width: 90%; /* Must be percentage or pixels for horizontal alignment */
   }
 }
 
@@ -489,10 +488,6 @@ width:100%;
   margin-bottom: 2%;
 }
 
-.intro-video{
-  border: 10px solid white;
-}
-
 .textbox{
   border: 2px solid white;
   font-family: "HelveticaNeue-UltraLight", 'Roboto', sans-serif;
@@ -502,5 +497,9 @@ width:100%;
   background: none;
   width: 60%;
   resize: vertical;
+}
 
+.submit-warning{
+  font-size: 0.3em;
+  font-style: italic;
 }
