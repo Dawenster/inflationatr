@@ -12,7 +12,7 @@
       </div>
       
       <div class="inner cover">
-      	<h1 class="counter"><%= @count %></h1>
+      	<h1 class="counter"><%= number_with_delimiter(@count, :delimiter => ',') %></h1>
       	<p class="sub-counter">numbers inflationated</p>
       </div>
       

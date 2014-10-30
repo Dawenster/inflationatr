@@ -1,9 +1,11 @@
-if(typeof(String.prototype.trim) === "undefined")
-{
-    String.prototype.trim = function() 
-    {
-        return String(this).replace(/^\s+|\s+$/g, '');
-    };
+if(typeof(String.prototype.trim) === "undefined") {
+  String.prototype.trim = function() {
+    return String(this).replace(/^\s+|\s+$/g, '');
+  };
+}
+
+function numberWithCommas(x) {
+  return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 
 $(document).ready(function() {
@@ -109,7 +111,8 @@ $(document).ready(function() {
   }
 
   var addCountToView = function(numToAdd) {
-    var oldNum = parseInt($(".counter").text());
-    $(".counter").text(oldNum + numToAdd);
+    var oldText = $(".counter").text().replace (/,/g, "");
+    var oldNum = parseInt(oldText);
+    $(".counter").text(numberWithCommas(oldNum + numToAdd));
   }
 });
