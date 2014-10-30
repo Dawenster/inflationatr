@@ -58,11 +58,11 @@ $(document).ready(function() {
         if (originalWord) {
           var upcase = originalWord[0] === originalWord[0].toUpperCase();
 
-          var wordWithPunc = valueArr[i].toUpperCase();
+          var wordWithPunc = valueArr[i];
 
           var wordWithPuncArr = wordWithPunc.split(/\s*\b\s*/);
 
-          var word = wordWithPuncArr.shift();
+          var word = wordWithPuncArr.shift().toUpperCase();
 
           var translated = data[word];
 
@@ -128,85 +128,14 @@ $(document).ready(function() {
                 "Whether 'tis nobler in the mind to suffer\n" +
                 "The slings and arrows of outrageous fortune\n" +
                 "Or to take arms against a sea of troubles\n" +
-                "And by opposing end them. To die, to sleep--\n" +
-                "No more--and by a sleep to say we end\n" +
-                "The heartache, and the thousand natural shocks\n" +
-                "That flesh is heir to. 'Tis a consummation\n" +
-                "Devoutly to be wished. To die, to sleep--\n" +
-                "To sleep--perchance to dream: ay, there's the rub,\n" +
-                "For in that sleep of death what dreams may come\n" +
-                "When we have shuffled off this mortal coil,\n" +
-                "Must give us pause. There's the respect\n" +
-                "That makes calamity of so long life.\n" +
-                "For who would bear the whips and scorns of time,\n" +
-                "Th' oppressor's wrong, the proud man's contumely\n" +
-                "The pangs of despised love, the law's delay,\n" +
-                "The insolence of office, and the spurns\n" +
-                "That patient merit of th' unworthy takes,\n" +
-                "When he himself might his quietus make\n" +
-                "With a bare bodkin? Who would fardels bear,\n" +
-                "To grunt and sweat under a weary life,\n" +
-                "But that the dread of something after death,\n" +
-                "The undiscovered country, from whose bourn\n" +
-                "No traveller returns, puzzles the will,\n" +
-                "And makes us rather bear those ills we have\n" +
-                "Than fly to others that we know not of?\n" +
-                "Thus conscience does make cowards of us all,\n" +
-                "And thus the native hue of resolution\n" +
-                "Is sicklied o'er with the pale cast of thought,\n" +
-                "And enterprise of great pitch and moment\n" +
-                "With this regard their currents turn awry\n" +
-                "And lose the name of action. -- Soft you now,\n" +
-                "The fair Ophelia! -- Nymph, in thy orisons\n" +
-                "Be all my sins remembered."
+                "And by opposing end them."
 
-  var feist = "Oh baby, baby\n" +
-              "Oh baby, baby\n\n" +
-
-              "Oh baby, baby, how was I supposed to know\n" +
-              "That something wasn't right here\n" +
-              "Oh baby, baby, I shouldn't have let you go\n" +
-              "And now you're out of sight, yeah\n" +
-              "Show me how you want it to be\n" +
-              "Tell me baby 'cause I need to know now, oh because\n\n" +
-
-              "My loneliness is killing me (and I)\n" +
-              "I must confess I still believe (still believe)\n" +
-              "When I'm not with you I lose my mind \n" +
-              "Give me a sign\n" +
-              "Hit me baby one more time\n\n" +
- 
-              "Oh baby, baby\n" +
-              "The reason I breathe is you\n" +
-              "Boy you got me blinded\n" +
-              "Oh pretty baby\n" +
-              "There's nothing that I wouldn't do\n" +
-              "It's not the way I planned it\n" +
-              "Show me how you want it to be\n" +
-              "Tell me baby 'cause I need to know now, oh because\n\n" +
-
-              "Oh baby, baby\n" +
-              "Oh baby, baby\n" +
-              "Yeah,\n\n" +
-
-              "Oh baby, baby how was I supposed to know\n" +
-              "Oh pretty baby, I shouldn't have let you go\n" +
-              "I must confess, that my loneliness is killing me now\n" +
-              "Don't you know I still believe\n" +
-              "That you will be here\n" +
-              "And give me a sign\n" +
-              "Hit me baby one more time\n\n" +
- 
-              "I must confess, that my loneliness is killing me now\n" +
-              "Don't you know I still believe\n" +
-              "That you will be here\n" +
-              "And give me a sign\n" +
-              "Hit me baby one more time"
+  var frost = "Two roads diverged in a wood, and I—I took the one less traveled by, and that has made all the difference."
 
   var texts = {
     "gettysburg": gettysburg,
     "hamlet": hamlet,
-    "feist": feist
+    "frost": frost
   }
 
 
