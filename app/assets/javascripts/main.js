@@ -148,7 +148,7 @@ $(document).ready(function() {
     e.preventDefault();
     var text = $(this).attr("data-text");
 
-    $('.animated').val(texts[text]).trigger('autosize.resize');
+    $('#input').val(texts[text]).trigger('autosize.resize');
     inflationate();
   });
 });
