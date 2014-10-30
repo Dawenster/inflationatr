@@ -147,7 +147,6 @@ $(document).ready(function() {
   $("body").on("click", ".btn-text", function(e) {
     e.preventDefault();
     var text = $(this).attr("data-text");
-
     $('#input').val(texts[text]).trigger('autosize.resize');
     inflationate();
   });
