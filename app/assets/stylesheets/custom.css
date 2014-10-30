@@ -542,12 +542,14 @@ textarea:focus{
   float: left;
   color: white;
   font-size: 1.5em;
+  overflow: auto;
 }
 
 .tr-output{
   background-color: rgba(0,0,0,0.2);
   float: right;
   font-size: 1.5em;
+  overflow: auto;
 }
 
 .fourpercent{
